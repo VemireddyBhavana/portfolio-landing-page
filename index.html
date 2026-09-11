@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vemireddy Bhavana | Frontend Developer & CS Student</title>
+    <meta name="description" content="Portfolio of Vemireddy Bhavana - Frontend Developer, Problem Solver, and Computer Science Student specializing in modern, high-performance web experiences.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Background Ambient Glow Blobs -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
+
+    <!-- ==========================================
+                    NAVBAR
+    =========================================== -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#home" class="logo-name">Vemireddy Bhavana</a>
+            </div>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#journey" class="nav-link">Journey</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#work" class="nav-link">Work With Me</a></li>
+                <li class="mobile-cta"><a href="#contact" class="talk-btn">Let's Talk</a></li>
+            </ul>
+
+            <div class="nav-cta">
+                <a href="#contact" class="talk-btn">Let's Talk</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ==========================================
+                        HERO SECTION
+        =========================================== -->
+        <section class="hero" id="home">
+            <div class="hero-container">
+                <div class="hero-badge-pill">
+                    <span>PORTFOLIO 2026</span>
+                </div>
+
+                <div class="hero-header">
+                    <h1 class="hero-title">
+                        VEMIREDDY
+                        <span class="gradient-text">BHAVANA</span>
+                    </h1>
+                </div>
+
+                <div class="hero-typing-wrapper">
+                    <span class="typing-lead">I am a</span>
+                    <span class="typing-target" id="hero-typing"></span>
+                    <span class="cursor">|</span>
+                </div>
+
+                <!-- Animated Working On Badge -->
+                <div class="status-badge">
+                    <span class="status-pulse-dot"></span>
+                    <span class="status-badge-title">CURRENTLY WORKING ON</span>
+                    <span class="status-badge-divider">|</span>
+                    <div class="status-badge-value">
+                        <span id="status-typing"></span>
+                        <span class="cursor-status">|</span>
+                    </div>
+                </div>
+
+                <!-- Circular Profile with Ambient Glow & Floating Border -->
+                <div class="hero-profile-container">
+                    <div class="profile-halo"></div>
+                    <div class="profile-ring"></div>
+                    <div class="profile-avatar-wrapper">
+                        <img src="images/profile.jpg" alt="Vemireddy Bhavana" class="hero-avatar">
+                    </div>
+                </div>
+
+                <!-- View Resume CTA Button directly below profile photo -->
+                <div class="resume-cta-wrap">
+                    <a href="#about" class="btn-resume">
+                        <i class="fa-regular fa-file-lines"></i>
+                        <span>View Resume</span>
+                    </a>
+                </div>
+
+                <!-- 3-Column Impact Metric Cards (Matching reference layout) -->
+                <div class="impact-metrics-grid">
+                    <div class="metric-card glass-card">
+                        <h3 class="metric-number">150+</h3>
+                        <p class="metric-label">DSA PROBLEMS SOLVED</p>
+                    </div>
+                    <div class="metric-card glass-card">
+                        <h3 class="metric-number">10+</h3>
+                        <p class="metric-label">PROJECTS BUILT</p>
+                    </div>
+                    <div class="metric-card glass-card">
+                        <h3 class="metric-number">100%</h3>
+                        <p class="metric-label">COMMITMENT TO QUALITY</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+                        ABOUT SECTION
+        =========================================== -->
+        <section class="about section-padding" id="about">
+            <div class="container">
+                <div class="about-grid">
+
+                    <!-- Left Column: Profile Card -->
+                    <div class="about-visual">
+                        <div class="about-card-glow"></div>
+                        <div class="about-card glass-card">
+                            <div class="about-image-wrapper">
+                                <img src="images/profile.jpg" alt="Vemireddy Bhavana" class="about-img">
+                                <div class="card-overlay-badge">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                    <span>CS Undergrad</span>
+                                </div>
+                            </div>
+                            <div class="about-quick-stats">
+                                <div class="stat-pill">
+                                    <span class="stat-num">Fast</span>
+                                    <span class="stat-label">Learner</span>
+                                </div>
+                                <div class="stat-pill">
+                                    <span class="stat-num">Clean</span>
+                                    <span class="stat-label">Code</span>
+                                </div>
+                                <div class="stat-pill">
+                                    <span class="stat-num">Modern</span>
+                                    <span class="stat-label">UI / UX</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Center Column: Bio text (no heading labels) -->
+                    <div class="about-info">
+                        <div class="about-text-content">
+                            <p class="lead-text">
+                                Hello! I'm <strong class="text-white">Vemireddy Bhavana</strong>, a driven Computer Science Student and Frontend Developer who loves crafting visually stunning, responsive, and intuitive web applications.
+                            </p>
+                            <p>
+                                Passionate about modern web development, I bridge the gap between creative visual design and robust engineering. Whether it's architecting sleek user interfaces with smooth micro-interactions or solving algorithmic problems, I take pride in building real-world projects that make a difference.
+                            </p>
+                            <p>
+                                Always curious and actively exploring cutting-edge technologies, with a strong enthusiasm for Artificial Intelligence, Web Innovations, and collaborative open-source engineering.
+                            </p>
+                        </div>
+
+                        <div class="about-cards-grid">
+                            <div class="mini-feature-card">
+                                <div class="feature-icon"><i class="fa-solid fa-code"></i></div>
+                                <div class="feature-text">
+                                    <h4>Frontend Development</h4>
+                                    <p>Pixel-perfect, fluid, and responsive digital interfaces.</p>
+                                </div>
+                            </div>
+                            <div class="mini-feature-card">
+                                <div class="feature-icon"><i class="fa-solid fa-brain"></i></div>
+                                <div class="feature-text">
+                                    <h4>Problem Solving</h4>
+                                    <p>Algorithmic thinking and efficient data structure design.</p>
+                                </div>
+                            </div>
+                            <div class="mini-feature-card">
+                                <div class="feature-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                                <div class="feature-text">
+                                    <h4>AI &amp; Future Tech</h4>
+                                    <p>Exploring intelligent automation and modern software stacks.</p>
+                                </div>
+                            </div>
+                            <div class="mini-feature-card">
+                                <div class="feature-icon"><i class="fa-solid fa-rocket"></i></div>
+                                <div class="feature-text">
+                                    <h4>Real-World Projects</h4>
+                                    <p>Transforming ideas into high-impact functional solutions.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: 3D Tech Orbit Circle -->
+                    <div class="about-orbit-col" id="skills">
+                        <div class="orbit-stage" id="orbit-stage">
+                            <div class="orbit-ambient-glow"></div>
+                            <div class="orbit-ring-visual outer-ring"></div>
+                            <div class="orbit-ring-visual middle-ring"></div>
+                            <div class="orbit-ring-visual inner-ring"></div>
+
+                            <div class="orbit-core">
+                                <div class="core-pulsar"></div>
+                                <div class="core-inner">
+                                    <i class="fa-solid fa-bolt"></i>
+                                </div>
+                            </div>
+
+                            <div class="orbit-track" id="orbit-track">
+                                <div class="tech-icon" data-tech="HTML5" style="--brand-color: #E34F26;" aria-label="HTML5">
+                                    <i class="fa-brands fa-html5"></i>
+                                </div>
+                                <div class="tech-icon" data-tech="CSS3" style="--brand-color: #1572B6;" aria-label="CSS3">
+                                    <i class="fa-brands fa-css3-alt"></i>
+                                </div>
+                                <div class="tech-icon" data-tech="JavaScript" style="--brand-color: #F7DF1E;" aria-label="JavaScript">
+                                    <i class="fa-brands fa-js"></i>
+                                </div>
+                                <div class="tech-icon" data-tech="React" style="--brand-color: #61DAFB;" aria-label="React">
+                                    <i class="fa-brands fa-react"></i>
+                                </div>
+                                <div class="tech-icon" data-tech="Git" style="--brand-color: #F05032;" aria-label="Git">
+                                    <i class="fa-brands fa-git-alt"></i>
+                                </div>
+                                <div class="tech-icon" data-tech="GitHub" style="--brand-color: #FFFFFF;" aria-label="GitHub">
+                                    <i class="fa-brands fa-github"></i>
+                                </div>
+                                <div class="tech-icon" data-tech="Java" style="--brand-color: #EA2D2E;" aria-label="Java">
+                                    <i class="fa-brands fa-java"></i>
+                                </div>
+                                <div class="tech-icon" data-tech="Python" style="--brand-color: #387EB8;" aria-label="Python">
+                                    <i class="fa-brands fa-python"></i>
+                                </div>
+                                <div class="tech-icon" data-tech="C++" style="--brand-color: #00599C;" aria-label="C++">
+                                    <svg class="custom-svg-icon" viewBox="0 0 128 128" width="32" height="32" fill="none">
+                                        <path d="M117.5 39.5L67.5 10.6c-2.2-1.3-4.8-1.3-7 0L10.5 39.5c-2.2 1.3-3.5 3.6-3.5 6.1v57.8c0 2.5 1.3 4.8 3.5 6.1l50 28.9c1.1.6 2.3 1 3.5 1s2.4-.3 3.5-1l50-28.9c2.2-1.3 3.5-3.6 3.5-6.1V45.6c0-2.5-1.3-4.8-3.5-6.1z" fill="#00599C"/>
+                                        <path d="M64 21.6l42.4 24.5v49L64 119.6 21.6 95.1v-49L64 21.6z" fill="#004482"/>
+                                        <path d="M68.5 76.5c-1.8 4.2-5.5 7.4-10.2 8.7-6.9 1.9-14.2-.8-18.1-6.8-3.9-6-3.9-13.8 0-19.8 3.9-6 11.2-8.7 18.1-6.8 4.7 1.3 8.4 4.5 10.2 8.7h11.7C78 48.7 71.7 43.1 63.8 41.1 53.6 38.5 42.8 42.4 37 50.8c-5.8 8.4-5.8 19.6 0 28 5.8 8.4 16.6 12.3 26.8 9.7 7.9-2 14.2-7.6 16.4-15.4H68.5v-3.6h-.01.01z" fill="#FFFFFF"/>
+                                        <path d="M86.5 59.5h-4.3v-4.3h-3.6v4.3h-4.3v3.6h4.3v4.3h3.6v-4.3h4.3v-3.6zm19.8 0H102v-4.3h-3.6v4.3h-4.3v3.6h4.3v4.3h3.6v-4.3h4.3v-3.6z" fill="#00599C"/>
+                                        <path d="M86.5 59.5h-4.3v-4.3h-3.6v4.3h-4.3v3.6h4.3v4.3h3.6v-4.3h4.3v-3.6zm19.8 0H102v-4.3h-3.6v4.3h-4.3v3.6h4.3v4.3h3.6v-4.3h4.3v-3.6z" fill="#FFFFFF"/>
+                                    </svg>
+                                </div>
+                                <div class="tech-icon" data-tech="VS Code" style="--brand-color: #007ACC;" aria-label="VS Code">
+                                    <svg class="custom-svg-icon" viewBox="0 0 100 100" width="32" height="32">
+                                        <path d="M72.2 97.4c2.8 1.4 6.2.7 8.2-1.6l17.3-15.9c2.1-1.9 3.3-4.6 3.3-7.4V27.5c0-2.8-1.2-5.5-3.3-7.4L80.4 4.2c-2-1.8-4.9-2.5-7.6-1.5-2.7.9-4.7 3.3-5 6.2L64.9 32 39.4 12.6c-2.3-1.7-5.5-1.6-7.7.3L5.3 35.8c-2.9 2.5-3.5 6.8-1.5 10 1.2 1.9 3.2 3.1 5.4 3.3L37.1 51 9.2 72.9c-2.8 2.2-3.8 6.1-2.4 9.4 1.4 3.3 4.9 5.3 8.5 4.8l26.4-3.5 23.2 21.3c2 1.8 4.7 2.6 7.3 2.5z" fill="#007ACC"/>
+                                        <path d="M80.4 4.2c-2-1.8-4.9-2.5-7.6-1.5-2.7.9-4.7 3.3-5 6.2L64.9 32l15.5 12.3V11.6c0-2.8-1.2-5.5-3.3-7.4z" fill="#1F9CF0"/>
+                                        <path d="M80.4 88.4L64.9 68l2.9 23.1c.3 2.9 2.3 5.3 5 6.2 2.7.9 5.6.3 7.6-1.5l17.3-15.9V72.5L80.4 88.4z" fill="#0065A9"/>
+                                        <path d="M39.4 12.6c-2.3-1.7-5.5-1.6-7.7.3L5.3 35.8c-2.9 2.5-3.5 6.8-1.5 10 1.2 1.9 3.2 3.1 5.4 3.3L37.1 51 64.9 32 39.4 12.6z" fill="#007ACC" opacity="0.9"/>
+                                    </svg>
+                                </div>
+                                <div class="tech-icon" data-tech="Node.js" style="--brand-color: #5FA04E;" aria-label="Node.js">
+                                    <i class="fa-brands fa-node-js"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+                    EXPERIENCE SECTION
+        =========================================== -->
+        <section class="experience-section section-padding" id="journey">
+            <div class="container">
+                <div class="section-label centered">
+                    <span class="label-line"></span>
+                    <span>CAREER & EDUCATION</span>
+                    <span class="label-line"></span>
+                </div>
+                <h2 class="section-heading text-center">
+                    My Growth <span class="gradient-text">Journey</span>
+                </h2>
+
+                <div class="timeline">
+                    <!-- Item 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content glass-card">
+                            <span class="timeline-tag">2023 - Present</span>
+                            <h3>B.Tech in Computer Science</h3>
+                            <p class="timeline-role">Academic Foundation & Engineering</p>
+                            <p>Pursuing rigorous coursework in Data Structures & Algorithms, Object-Oriented Programming, Database Management, and Web Technologies. Consistently building practical projects.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content glass-card">
+                            <span class="timeline-tag">2024</span>
+                            <h3>Frontend Web Development</h3>
+                            <p class="timeline-role">Modern Web Architecture & UI Design</p>
+                            <p>Designed and deployed high-performance responsive web pages, interactive 3D landing pages, and interactive client applications using pure HTML5, CSS3, JavaScript, and modern tooling.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content glass-card">
+                            <span class="timeline-tag">Ongoing</span>
+                            <h3>Open Source & AI Exploration</h3>
+                            <p class="timeline-role">Continuous Technical Upskilling</p>
+                            <p>Actively learning advanced React ecosystems, collaborating on open-source repositories, and integrating AI workflows into modern full-stack web architectures.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+                        PROJECTS SECTION
+        =========================================== -->
+        <section class="projects-section section-padding" id="projects">
+            <div class="container">
+                <div class="section-label centered">
+                    <span class="label-line"></span>
+                    <span>PORTFOLIO SHOWCASE</span>
+                    <span class="label-line"></span>
+                </div>
+                <h2 class="section-heading text-center">
+                    Featured <span class="gradient-text">Projects</span>
+                </h2>
+                <p class="section-desc text-center">
+                    A curated selection of web applications, frontend architectures, and problem-solving builds.
+                </p>
+
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card glass-card">
+                        <div class="project-header">
+                            <div class="project-badge">Featured</div>
+                            <div class="project-links">
+                                <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+                                <a href="#home" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">3D Orbit Developer Portfolio</h3>
+                        <p class="project-desc">
+                            A high-end dark portfolio website featuring dynamic mathematical sin/cos orbital 3D physics, dual typewriter engines, and glassmorphism.
+                        </p>
+                        <div class="project-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>Vanilla JS</span>
+                            <span>3D Math</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card glass-card">
+                        <div class="project-header">
+                            <div class="project-badge">Web App</div>
+                            <div class="project-links">
+                                <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+                                <a href="#contact" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Interactive Task & Flow Workspace</h3>
+                        <p class="project-desc">
+                            Modern productivity dashboard with responsive state management, dark/light theme switching, and local storage persistence.
+                        </p>
+                        <div class="project-tags">
+                            <span>JavaScript</span>
+                            <span>UI/UX</span>
+                            <span>LocalStorage</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card glass-card">
+                        <div class="project-header">
+                            <div class="project-badge">Problem Solving</div>
+                            <div class="project-links">
+                                <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+                                <a href="#contact" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Algorithmic Visualizer & DSA Suite</h3>
+                        <p class="project-desc">
+                            Visual simulation for sorting algorithms, graph traversals, and data structures implemented with clean code principles.
+                        </p>
+                        <div class="project-tags">
+                            <span>Java</span>
+                            <span>Data Structures</span>
+                            <span>Algorithms</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+                    ACHIEVEMENTS SECTION
+        =========================================== -->
+        <section class="achievements-section section-padding" id="achievements">
+            <div class="container">
+                <div class="section-label centered">
+                    <span class="label-line"></span>
+                    <span>MILESTONES & RECOGNITION</span>
+                    <span class="label-line"></span>
+                </div>
+                <h2 class="section-heading text-center">
+                    Key <span class="gradient-text">Achievements</span>
+                </h2>
+
+                <div class="achievements-grid">
+                    <div class="achievement-card glass-card">
+                        <div class="achievement-icon">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <h3>DSA Problem Solver</h3>
+                        <p>Solved 150+ coding problems across LeetCode, HackerRank, and GeeksforGeeks focusing on core data structures and algorithmic efficiency.</p>
+                    </div>
+
+                    <div class="achievement-card glass-card">
+                        <div class="achievement-icon">
+                            <i class="fa-solid fa-certificate"></i>
+                        </div>
+                        <h3>Certified Web Developer</h3>
+                        <p>Mastered modern responsive frontend design, semantic HTML, modern CSS layouts (Flexbox/Grid), and advanced Vanilla JavaScript.</p>
+                    </div>
+
+                    <div class="achievement-card glass-card">
+                        <div class="achievement-icon">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <h3>Academic Excellence</h3>
+                        <p>Consistent high academic performance in Computer Science, actively mentoring peers and leading technical presentations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+                WORK WITH ME / CONTACT SECTION
+        =========================================== -->
+        <section class="contact-section section-padding" id="work">
+            <div class="container" id="contact">
+                <div class="contact-box glass-card">
+                    <div class="contact-content text-center">
+                        <div class="section-label centered">
+                            <span class="label-line"></span>
+                            <span>LET'S BUILD SOMETHING GREAT</span>
+                            <span class="label-line"></span>
+                        </div>
+                        <h2 class="section-heading">
+                            Interested in <span class="gradient-text">Working Together?</span>
+                        </h2>
+                        <p class="contact-desc">
+                            Whether you have an exciting project idea, an internship opportunity, or simply want to connect and talk tech, my inbox is always open!
+                        </p>
+
+                        <div class="contact-action-group">
+                            <a href="mailto:bhavana@example.com" class="btn btn-primary btn-large">
+                                <i class="fa-solid fa-envelope"></i>
+                                <span>Send an Email</span>
+                            </a>
+                            <a href="#about" class="btn btn-glass btn-large">
+                                <i class="fa-solid fa-file-lines"></i>
+                                <span>View Resume</span>
+                            </a>
+                        </div>
+
+                        <div class="social-links-row">
+                            <a href="https://github.com" target="_blank" rel="noopener" class="social-bubble" aria-label="GitHub">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-bubble" aria-label="LinkedIn">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="mailto:bhavana@example.com" class="social-bubble" aria-label="Email">
+                                <i class="fa-regular fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==========================================
+                        FOOTER
+    =========================================== -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Vemireddy Bhavana. Crafted with precision, pure HTML, CSS & JavaScript.</p>
+            <a href="#home" class="back-to-top" aria-label="Back to Top">
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- JavaScript Application -->
+    <script src="script.js"></script>
+</body>
+
+</html>
