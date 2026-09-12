@@ -276,25 +276,58 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         const getChatReply = message => {
-            const normalizedMessage = message.toLowerCase();
+            const normalizedMessage = message.toLowerCase().replace(/[^a-z0-9\s]/g, ' ');
+            const matchesAny = keywords => keywords.some(keyword => normalizedMessage.includes(keyword));
 
-            if (normalizedMessage.includes('service') || normalizedMessage.includes('offer') || normalizedMessage.includes('help')) {
+            if (matchesAny(['hello', 'hi ', 'hey', 'good morning', 'good afternoon'])) {
+                return 'Hi! I can answer questions about Bhavana\'s services, projects, skills, education, availability, and contact details. What would you like to know?';
+            }
+
+            if (matchesAny(['thank', 'thanks', 'great', 'perfect'])) {
+                return 'You\'re welcome! I\'m here if you want to explore a service or start a conversation with Bhavana.';
+            }
+
+            if (matchesAny(['service', 'offer', 'what can you do', 'help me'])) {
                 return 'Bhavana offers Web Development, UI/UX and Figma Design, Event Management, Content and Reels Script Writing, Creative Design and Branding, and Product Strategy and Consulting.';
             }
 
-            if (normalizedMessage.includes('experience') || normalizedMessage.includes('skill')) {
-                return 'Bhavana focuses on frontend development, responsive UI, JavaScript, React, data structures, algorithms, and collaborative web projects.';
+            if (matchesAny(['price', 'pricing', 'cost', 'budget', 'rate', 'how much'])) {
+                return 'Pricing depends on the project scope, timeline, and deliverables. Send an inquiry with your requirements and Bhavana can discuss a suitable plan.';
             }
 
-            if (normalizedMessage.includes('education') || normalizedMessage.includes('study')) {
-                return 'Bhavana is studying Computer Science with a focus on Data Science and Artificial Intelligence, alongside a BSc in Computer Science.';
+            if (matchesAny(['project', 'portfolio', 'build', 'website'])) {
+                return 'Featured work includes a 3D Orbit Developer Portfolio, an Interactive Task and Flow Workspace, and an Algorithmic Visualizer and DSA Suite. Use the Projects section to explore them.';
             }
 
-            if (normalizedMessage.includes('contact') || normalizedMessage.includes('hire') || normalizedMessage.includes('email')) {
-                return 'Click Let\'s Talk or Start a Conversation to send an inquiry. You can also use the email icon in the footer to open Gmail.';
+            if (matchesAny(['technology', 'technologies', 'tech stack', 'tools', 'programming', 'code', 'language'])) {
+                return 'Bhavana works with HTML, CSS, JavaScript, React, Java, Python, Git, GitHub, Node.js, UI/UX tools, and modern AI workflows.';
             }
 
-            return 'I can help with services, experience, education, or contact details. Try one of the quick questions below.';
+            if (matchesAny(['experience', 'skill', 'expertise', 'work history'])) {
+                return 'Bhavana focuses on frontend development, responsive UI, JavaScript, React, data structures, algorithms, Git workflows, and collaborative web projects.';
+            }
+
+            if (matchesAny(['education', 'study', 'college', 'degree', 'university'])) {
+                return 'Bhavana is studying Computer Science with a focus on Data Science and Artificial Intelligence through NIAT, alongside a BSc in Computer Science at BITS Pilani, Hyderabad Campus.';
+            }
+
+            if (matchesAny(['available', 'availability', 'freelance', 'internship', 'intern', 'full time', 'start'])) {
+                return 'Bhavana is open to frontend development opportunities, internships, freelance projects, and thoughtful collaborations. Click Let\'s Talk to share your details.';
+            }
+
+            if (matchesAny(['resume', 'cv', 'qualification'])) {
+                return 'You can review Bhavana\'s experience, education, skills, projects, and achievements throughout this portfolio. Use Let\'s Talk for a direct conversation.';
+            }
+
+            if (matchesAny(['contact', 'hire', 'email', 'linkedin', 'github', 'reach'])) {
+                return 'Click Let\'s Talk or Start a Conversation to send an inquiry. The footer also links to Bhavana\'s LinkedIn, GitHub, and Gmail compose page.';
+            }
+
+            if (matchesAny(['who are you', 'who is bhavana', 'about'])) {
+                return 'Bhavana is a Computer Science student and frontend developer who enjoys building polished interfaces, solving problems, and creating useful digital experiences.';
+            }
+
+            return 'I can answer questions about services, projects, technologies, experience, education, availability, pricing, resume details, or contact options. Try asking about one of those topics.';
         };
 
         const submitChatMessage = message => {
