@@ -31,7 +31,7 @@
     <header class="header">
         <nav class="navbar">
             <div class="logo">
-                <a href="#home" class="logo-name">Vemireddy Bhavana</a>
+                <a href="#about" class="logo-name">Vemireddy Bhavana</a>
             </div>
 
             <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation">
@@ -42,7 +42,8 @@
 
             <ul class="nav-links" id="nav-links">
                 <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#journey" class="nav-link">Journey</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#achievements" class="nav-link">Achievements</a></li>
                 <li><a href="#work" class="nav-link">Work With Me</a></li>
@@ -57,267 +58,157 @@
 
     <main>
         <!-- ==========================================
-                        HERO SECTION
-        =========================================== -->
-        <section class="hero" id="home">
-            <div class="hero-container">
-                <div class="hero-badge-pill">
-                    <span>PORTFOLIO 2026</span>
-                </div>
-
-                <div class="hero-header">
-                    <h1 class="hero-title">
-                        VEMIREDDY
-                        <span class="gradient-text">BHAVANA</span>
-                    </h1>
-                </div>
-
-                <div class="hero-typing-wrapper">
-                    <span class="typing-lead">I am a</span>
-                    <span class="typing-target" id="hero-typing"></span>
-                    <span class="cursor">|</span>
-                </div>
-
-                <!-- Animated Working On Badge -->
-                <div class="status-badge">
-                    <span class="status-pulse-dot"></span>
-                    <span class="status-badge-title">CURRENTLY WORKING ON</span>
-                    <span class="status-badge-divider">|</span>
-                    <div class="status-badge-value">
-                        <span id="status-typing"></span>
-                        <span class="cursor-status">|</span>
-                    </div>
-                </div>
-
-                <!-- Circular Profile with Ambient Glow & Floating Border -->
-                <div class="hero-profile-container">
-                    <div class="profile-halo"></div>
-                    <div class="profile-ring"></div>
-                    <div class="profile-avatar-wrapper">
-                        <img src="images/profile.jpg" alt="Vemireddy Bhavana" class="hero-avatar">
-                    </div>
-                </div>
-
-                <!-- View Resume CTA Button directly below profile photo -->
-                <div class="resume-cta-wrap">
-                    <a href="#about" class="btn-resume">
-                        <i class="fa-regular fa-file-lines"></i>
-                        <span>View Resume</span>
-                    </a>
-                </div>
-
-                <!-- 3-Column Impact Metric Cards (Matching reference layout) -->
-                <div class="impact-metrics-grid">
-                    <div class="metric-card glass-card">
-                        <h3 class="metric-number">150+</h3>
-                        <p class="metric-label">DSA PROBLEMS SOLVED</p>
-                    </div>
-                    <div class="metric-card glass-card">
-                        <h3 class="metric-number">10+</h3>
-                        <p class="metric-label">PROJECTS BUILT</p>
-                    </div>
-                    <div class="metric-card glass-card">
-                        <h3 class="metric-number">100%</h3>
-                        <p class="metric-label">COMMITMENT TO QUALITY</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ==========================================
                         ABOUT SECTION
         =========================================== -->
-        <section class="about section-padding" id="about">
-            <div class="container">
-                <div class="about-grid">
+        <section class="about section-padding first-section" id="about">
+            <div class="container about-container">
 
-                    <!-- Left Column: Profile Card -->
-                    <div class="about-visual">
-                        <div class="about-card-glow"></div>
-                        <div class="about-card glass-card">
-                            <div class="about-image-wrapper">
-                                <img src="images/profile.jpg" alt="Vemireddy Bhavana" class="about-img">
-                                <div class="card-overlay-badge">
-                                    <i class="fa-solid fa-graduation-cap"></i>
-                                    <span>CS Undergrad</span>
-                                </div>
-                            </div>
-                            <div class="about-quick-stats">
-                                <div class="stat-pill">
-                                    <span class="stat-num">Fast</span>
-                                    <span class="stat-label">Learner</span>
-                                </div>
-                                <div class="stat-pill">
-                                    <span class="stat-num">Clean</span>
-                                    <span class="stat-label">Code</span>
-                                </div>
-                                <div class="stat-pill">
-                                    <span class="stat-num">Modern</span>
-                                    <span class="stat-label">UI / UX</span>
-                                </div>
-                            </div>
-                        </div>
+                <div class="about-hero">
+
+                    <h1 class="about-name-line-1">
+                        VEMIREDDY
+                    </h1>
+                    <h1 class="about-name-line-2 gradient-text">
+                        BHAVANA
+                    </h1>
+
+                    <div class="about-type-line">
+                        <span class="about-type-prefix">I am a&nbsp;</span>
+                        <span id="about-typing" class="about-type-dynamic"></span><span class="about-cursor">|</span>
                     </div>
 
-                    <!-- Center Column: Bio text (no heading labels) -->
-                    <div class="about-info">
-                        <div class="about-text-content">
-                            <p class="lead-text">
-                                Hello! I'm <strong class="text-white">Vemireddy Bhavana</strong>, a driven Computer Science Student and Frontend Developer who loves crafting visually stunning, responsive, and intuitive web applications.
-                            </p>
-                            <p>
-                                Passionate about modern web development, I bridge the gap between creative visual design and robust engineering. Whether it's architecting sleek user interfaces with smooth micro-interactions or solving algorithmic problems, I take pride in building real-world projects that make a difference.
-                            </p>
-                            <p>
-                                Always curious and actively exploring cutting-edge technologies, with a strong enthusiasm for Artificial Intelligence, Web Innovations, and collaborative open-source engineering.
-                            </p>
-                        </div>
-
-                        <div class="about-cards-grid">
-                            <div class="mini-feature-card">
-                                <div class="feature-icon"><i class="fa-solid fa-code"></i></div>
-                                <div class="feature-text">
-                                    <h4>Frontend Development</h4>
-                                    <p>Pixel-perfect, fluid, and responsive digital interfaces.</p>
-                                </div>
-                            </div>
-                            <div class="mini-feature-card">
-                                <div class="feature-icon"><i class="fa-solid fa-brain"></i></div>
-                                <div class="feature-text">
-                                    <h4>Problem Solving</h4>
-                                    <p>Algorithmic thinking and efficient data structure design.</p>
-                                </div>
-                            </div>
-                            <div class="mini-feature-card">
-                                <div class="feature-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-                                <div class="feature-text">
-                                    <h4>AI &amp; Future Tech</h4>
-                                    <p>Exploring intelligent automation and modern software stacks.</p>
-                                </div>
-                            </div>
-                            <div class="mini-feature-card">
-                                <div class="feature-icon"><i class="fa-solid fa-rocket"></i></div>
-                                <div class="feature-text">
-                                    <h4>Real-World Projects</h4>
-                                    <p>Transforming ideas into high-impact functional solutions.</p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="about-status-badge">
+                        <span class="about-status-dot"></span>
+                        <span class="about-status-label">CURRENTLY WORKING ON</span>
+                        <span class="about-status-divider"></span>
+                        <span id="about-status-typing" class="about-status-dynamic"></span><span class="about-status-cursor">|</span>
                     </div>
 
-                    <!-- Right Column: 3D Tech Orbit Circle -->
-                    <div class="about-orbit-col" id="skills">
-                        <div class="orbit-stage" id="orbit-stage">
-                            <div class="orbit-ambient-glow"></div>
-                            <div class="orbit-ring-visual outer-ring"></div>
-                            <div class="orbit-ring-visual middle-ring"></div>
-                            <div class="orbit-ring-visual inner-ring"></div>
-
-                            <div class="orbit-core">
-                                <div class="core-pulsar"></div>
-                                <div class="core-inner">
-                                    <i class="fa-solid fa-bolt"></i>
-                                </div>
-                            </div>
-
-                            <div class="orbit-track" id="orbit-track">
-                                <div class="tech-icon" data-tech="HTML5" style="--brand-color: #E34F26;" aria-label="HTML5">
-                                    <i class="fa-brands fa-html5"></i>
-                                </div>
-                                <div class="tech-icon" data-tech="CSS3" style="--brand-color: #1572B6;" aria-label="CSS3">
-                                    <i class="fa-brands fa-css3-alt"></i>
-                                </div>
-                                <div class="tech-icon" data-tech="JavaScript" style="--brand-color: #F7DF1E;" aria-label="JavaScript">
-                                    <i class="fa-brands fa-js"></i>
-                                </div>
-                                <div class="tech-icon" data-tech="React" style="--brand-color: #61DAFB;" aria-label="React">
-                                    <i class="fa-brands fa-react"></i>
-                                </div>
-                                <div class="tech-icon" data-tech="Git" style="--brand-color: #F05032;" aria-label="Git">
-                                    <i class="fa-brands fa-git-alt"></i>
-                                </div>
-                                <div class="tech-icon" data-tech="GitHub" style="--brand-color: #FFFFFF;" aria-label="GitHub">
-                                    <i class="fa-brands fa-github"></i>
-                                </div>
-                                <div class="tech-icon" data-tech="Java" style="--brand-color: #EA2D2E;" aria-label="Java">
-                                    <i class="fa-brands fa-java"></i>
-                                </div>
-                                <div class="tech-icon" data-tech="Python" style="--brand-color: #387EB8;" aria-label="Python">
-                                    <i class="fa-brands fa-python"></i>
-                                </div>
-                                <div class="tech-icon" data-tech="C++" style="--brand-color: #00599C;" aria-label="C++">
-                                    <svg class="custom-svg-icon" viewBox="0 0 128 128" width="32" height="32" fill="none">
-                                        <path d="M117.5 39.5L67.5 10.6c-2.2-1.3-4.8-1.3-7 0L10.5 39.5c-2.2 1.3-3.5 3.6-3.5 6.1v57.8c0 2.5 1.3 4.8 3.5 6.1l50 28.9c1.1.6 2.3 1 3.5 1s2.4-.3 3.5-1l50-28.9c2.2-1.3 3.5-3.6 3.5-6.1V45.6c0-2.5-1.3-4.8-3.5-6.1z" fill="#00599C"/>
-                                        <path d="M64 21.6l42.4 24.5v49L64 119.6 21.6 95.1v-49L64 21.6z" fill="#004482"/>
-                                        <path d="M68.5 76.5c-1.8 4.2-5.5 7.4-10.2 8.7-6.9 1.9-14.2-.8-18.1-6.8-3.9-6-3.9-13.8 0-19.8 3.9-6 11.2-8.7 18.1-6.8 4.7 1.3 8.4 4.5 10.2 8.7h11.7C78 48.7 71.7 43.1 63.8 41.1 53.6 38.5 42.8 42.4 37 50.8c-5.8 8.4-5.8 19.6 0 28 5.8 8.4 16.6 12.3 26.8 9.7 7.9-2 14.2-7.6 16.4-15.4H68.5v-3.6h-.01.01z" fill="#FFFFFF"/>
-                                        <path d="M86.5 59.5h-4.3v-4.3h-3.6v4.3h-4.3v3.6h4.3v4.3h3.6v-4.3h4.3v-3.6zm19.8 0H102v-4.3h-3.6v4.3h-4.3v3.6h4.3v4.3h3.6v-4.3h4.3v-3.6z" fill="#00599C"/>
-                                        <path d="M86.5 59.5h-4.3v-4.3h-3.6v4.3h-4.3v3.6h4.3v4.3h3.6v-4.3h4.3v-3.6zm19.8 0H102v-4.3h-3.6v4.3h-4.3v3.6h4.3v4.3h3.6v-4.3h4.3v-3.6z" fill="#FFFFFF"/>
-                                    </svg>
-                                </div>
-                                <div class="tech-icon" data-tech="VS Code" style="--brand-color: #007ACC;" aria-label="VS Code">
-                                    <svg class="custom-svg-icon" viewBox="0 0 100 100" width="32" height="32">
-                                        <path d="M72.2 97.4c2.8 1.4 6.2.7 8.2-1.6l17.3-15.9c2.1-1.9 3.3-4.6 3.3-7.4V27.5c0-2.8-1.2-5.5-3.3-7.4L80.4 4.2c-2-1.8-4.9-2.5-7.6-1.5-2.7.9-4.7 3.3-5 6.2L64.9 32 39.4 12.6c-2.3-1.7-5.5-1.6-7.7.3L5.3 35.8c-2.9 2.5-3.5 6.8-1.5 10 1.2 1.9 3.2 3.1 5.4 3.3L37.1 51 9.2 72.9c-2.8 2.2-3.8 6.1-2.4 9.4 1.4 3.3 4.9 5.3 8.5 4.8l26.4-3.5 23.2 21.3c2 1.8 4.7 2.6 7.3 2.5z" fill="#007ACC"/>
-                                        <path d="M80.4 4.2c-2-1.8-4.9-2.5-7.6-1.5-2.7.9-4.7 3.3-5 6.2L64.9 32l15.5 12.3V11.6c0-2.8-1.2-5.5-3.3-7.4z" fill="#1F9CF0"/>
-                                        <path d="M80.4 88.4L64.9 68l2.9 23.1c.3 2.9 2.3 5.3 5 6.2 2.7.9 5.6.3 7.6-1.5l17.3-15.9V72.5L80.4 88.4z" fill="#0065A9"/>
-                                        <path d="M39.4 12.6c-2.3-1.7-5.5-1.6-7.7.3L5.3 35.8c-2.9 2.5-3.5 6.8-1.5 10 1.2 1.9 3.2 3.1 5.4 3.3L37.1 51 64.9 32 39.4 12.6z" fill="#007ACC" opacity="0.9"/>
-                                    </svg>
-                                </div>
-                                <div class="tech-icon" data-tech="Node.js" style="--brand-color: #5FA04E;" aria-label="Node.js">
-                                    <i class="fa-brands fa-node-js"></i>
-                                </div>
-                            </div>
+                    <div class="about-photo-wrap">
+                        <div class="about-photo-glow-ring"></div>
+                        <div class="about-photo-outer-border"></div>
+                        <div class="about-photo-circle">
+                            <img src="images/profile.jpg" alt="Vemireddy Bhavana" class="about-photo-img">
                         </div>
                     </div>
 
                 </div>
+
             </div>
         </section>
 
         <!-- ==========================================
                     EXPERIENCE SECTION
         =========================================== -->
-        <section class="experience-section section-padding" id="journey">
+        <section class="experience-section section-padding" id="experience">
             <div class="container">
-                <div class="section-label centered">
-                    <span class="label-line"></span>
-                    <span>CAREER & EDUCATION</span>
-                    <span class="label-line"></span>
-                </div>
                 <h2 class="section-heading text-center">
-                    My Growth <span class="gradient-text">Journey</span>
+                    <span class="gradient-text">Experience</span>
+                </h2>
+
+                <div class="experience-grid">
+                    <div class="experience-card glass-card">
+                        <div class="exp-icon-wrap">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <div class="exp-header">
+                            <span class="exp-badge">Frontend Focus</span>
+                            <span class="exp-period">2024 - Present</span>
+                        </div>
+                        <h3 class="exp-title">Frontend Web Developer</h3>
+                        <p class="exp-company">Modern Web Architecture &amp; UI Design</p>
+                        <p class="exp-desc">
+                            Architecting responsive, high-performance web applications using HTML5, CSS3, JavaScript, and React. Crafting interactive animations, glassmorphic UI systems, and cross-browser optimized user experiences.
+                        </p>
+                        <div class="project-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>React</span>
+                            <span>UI/UX</span>
+                        </div>
+                    </div>
+
+                    <div class="experience-card glass-card">
+                        <div class="exp-icon-wrap">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <div class="exp-header">
+                            <span class="exp-badge">Problem Solving</span>
+                            <span class="exp-period">2023 - Present</span>
+                        </div>
+                        <h3 class="exp-title">Algorithmic Problem Solver</h3>
+                        <p class="exp-company">LeetCode, HackerRank &amp; GFG</p>
+                        <p class="exp-desc">
+                            Mastered foundational and advanced Data Structures &amp; Algorithms with 150+ problems solved. Focused on writing time-efficient, clean, and bug-resistant solutions in Java and Python.
+                        </p>
+                        <div class="project-tags">
+                            <span>Java</span>
+                            <span>Python</span>
+                            <span>Data Structures</span>
+                            <span>Algorithms</span>
+                        </div>
+                    </div>
+
+                    <div class="experience-card glass-card">
+                        <div class="exp-icon-wrap">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <div class="exp-header">
+                            <span class="exp-badge">Collaboration</span>
+                            <span class="exp-period">Ongoing</span>
+                        </div>
+                        <h3 class="exp-title">Open Source &amp; Tech Contributor</h3>
+                        <p class="exp-company">Community &amp; Team Projects</p>
+                        <p class="exp-desc">
+                            Collaborating on modern web repositories using Git/GitHub version control workflows. Integrating modern AI APIs, testing modern frontend patterns, and mentoring peers in web development fundamentals.
+                        </p>
+                        <div class="project-tags">
+                            <span>Git</span>
+                            <span>GitHub</span>
+                            <span>Node.js</span>
+                            <span>AI Workflows</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+                    EDUCATION SECTION
+        =========================================== -->
+        <section class="journey-section section-padding" id="education">
+            <div class="container">
+                <h2 class="section-heading text-center">
+                    <span class="gradient-text">Education</span>
                 </h2>
 
                 <div class="timeline">
-                    <!-- Item 1 -->
+                    <!-- Item 1 — NIAT -->
                     <div class="timeline-item">
-                        <div class="timeline-marker"></div>
+                        <div class="timeline-marker"><i class="fa-solid fa-brain"></i></div>
                         <div class="timeline-content glass-card">
-                            <span class="timeline-tag">2023 - Present</span>
-                            <h3>B.Tech in Computer Science</h3>
-                            <p class="timeline-role">Academic Foundation & Engineering</p>
-                            <p>Pursuing rigorous coursework in Data Structures & Algorithms, Object-Oriented Programming, Database Management, and Web Technologies. Consistently building practical projects.</p>
+                            <div class="timeline-meta">
+                                <span class="timeline-tag">2024 - 2028</span>
+                                <span class="timeline-status">In progress</span>
+                            </div>
+                            <h3>NxtWave Innovation of Advanced Technologies (NIAT)</h3>
+                            <p class="timeline-role">Computer Science Program</p>
+                            <p>Data Science and Artificial Intelligence specialization.</p>
                         </div>
                     </div>
 
-                    <!-- Item 2 -->
+                    <!-- Item 2 — BITS Pilani -->
                     <div class="timeline-item">
-                        <div class="timeline-marker"></div>
+                        <div class="timeline-marker"><i class="fa-solid fa-graduation-cap"></i></div>
                         <div class="timeline-content glass-card">
-                            <span class="timeline-tag">2024</span>
-                            <h3>Frontend Web Development</h3>
-                            <p class="timeline-role">Modern Web Architecture & UI Design</p>
-                            <p>Designed and deployed high-performance responsive web pages, interactive 3D landing pages, and interactive client applications using pure HTML5, CSS3, JavaScript, and modern tooling.</p>
-                        </div>
-                    </div>
-
-                    <!-- Item 3 -->
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content glass-card">
-                            <span class="timeline-tag">Ongoing</span>
-                            <h3>Open Source & AI Exploration</h3>
-                            <p class="timeline-role">Continuous Technical Upskilling</p>
-                            <p>Actively learning advanced React ecosystems, collaborating on open-source repositories, and integrating AI workflows into modern full-stack web architectures.</p>
+                            <div class="timeline-meta">
+                                <span class="timeline-tag">2024 - 2027</span>
+                                <span class="timeline-status">In progress</span>
+                            </div>
+                            <h3>BITS Pilani, Hyderabad Campus</h3>
+                            <p class="timeline-role">Bachelor of Science (BSc)</p>
+                            <p>Computer Science.</p>
                         </div>
                     </div>
                 </div>
@@ -329,17 +220,9 @@
         =========================================== -->
         <section class="projects-section section-padding" id="projects">
             <div class="container">
-                <div class="section-label centered">
-                    <span class="label-line"></span>
-                    <span>PORTFOLIO SHOWCASE</span>
-                    <span class="label-line"></span>
-                </div>
                 <h2 class="section-heading text-center">
-                    Featured <span class="gradient-text">Projects</span>
+                    <span class="gradient-text">Projects</span>
                 </h2>
-                <p class="section-desc text-center">
-                    A curated selection of web applications, frontend architectures, and problem-solving builds.
-                </p>
 
                 <div class="projects-grid">
                     <!-- Project 1 -->
@@ -348,7 +231,7 @@
                             <div class="project-badge">Featured</div>
                             <div class="project-links">
                                 <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
-                                <a href="#home" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                                <a href="#about" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                             </div>
                         </div>
                         <h3 class="project-title">3D Orbit Developer Portfolio</h3>
@@ -411,13 +294,8 @@
         =========================================== -->
         <section class="achievements-section section-padding" id="achievements">
             <div class="container">
-                <div class="section-label centered">
-                    <span class="label-line"></span>
-                    <span>MILESTONES & RECOGNITION</span>
-                    <span class="label-line"></span>
-                </div>
                 <h2 class="section-heading text-center">
-                    Key <span class="gradient-text">Achievements</span>
+                    <span class="gradient-text">Achievements</span>
                 </h2>
 
                 <div class="achievements-grid">
@@ -449,17 +327,155 @@
         </section>
 
         <!-- ==========================================
-                WORK WITH ME / CONTACT SECTION
+                    WORK WITH ME SECTION
         =========================================== -->
-        <section class="contact-section section-padding" id="work">
-            <div class="container" id="contact">
+        <section class="work-section section-padding" id="work">
+            <div class="container">
+                <h2 class="section-heading text-center">
+                    Work With <span class="gradient-text">Me</span>
+                </h2>
+
+                <div class="work-grid">
+                    <div class="work-card glass-card">
+                        <div class="work-icon">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h3>Web Development</h3>
+                        <p>Responsive, accessible websites built for speed, clarity, and real-world use.</p>
+                        <strong class="service-label">Services</strong>
+                        <ul class="service-list">
+                            <li>Portfolio Websites</li>
+                            <li>Business Websites</li>
+                            <li>Single-Page Landing Pages</li>
+                            <li>React Web Applications</li>
+                            <li>E-commerce Websites</li>
+                            <li>Website Redesigns</li>
+                            <li>Website Maintenance</li>
+                        </ul>
+                        <button class="service-inquiry" type="button" data-service="Web Development">Inquire for Service <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+
+                    <div class="work-card glass-card">
+                        <div class="work-icon">
+                            <i class="fa-solid fa-pen-ruler"></i>
+                        </div>
+                        <h3>UI/UX &amp; Figma Design</h3>
+                        <p>Thoughtful interfaces that make products easy and enjoyable to use.</p>
+                        <strong class="service-label">Services</strong>
+                        <ul class="service-list">
+                            <li>Website UI Design</li>
+                            <li>Mobile App UI</li>
+                            <li>Dashboard Design</li>
+                            <li>Landing Page Design</li>
+                            <li>Wireframes</li>
+                            <li>Interactive Prototypes</li>
+                            <li>Design Systems</li>
+                        </ul>
+                        <button class="service-inquiry" type="button" data-service="UI/UX &amp; Figma Design">Inquire for Service <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+
+                    <div class="work-card glass-card">
+                        <div class="work-icon">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+                        <h3>Event Management</h3>
+                        <p>Organized event experiences supported by clear planning and smooth execution.</p>
+                        <strong class="service-label">Services</strong>
+                        <ul class="service-list">
+                            <li>College Events</li>
+                            <li>Hackathons</li>
+                            <li>Workshops</li>
+                            <li>Tech Conferences</li>
+                            <li>Event Planning</li>
+                            <li>Guest Management</li>
+                            <li>Program Coordination</li>
+                        </ul>
+                        <button class="service-inquiry" type="button" data-service="Event Management">Inquire for Service <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+
+                    <div class="work-card glass-card">
+                        <div class="work-icon">
+                            <i class="fa-solid fa-file-lines"></i>
+                        </div>
+                        <h3>Content &amp; Reels Script Writing</h3>
+                        <p>Clear, engaging scripts and copy designed to hold attention and communicate ideas.</p>
+                        <strong class="service-label">Services</strong>
+                        <ul class="service-list">
+                            <li>Instagram Reel Scripts</li>
+                            <li>YouTube Shorts</li>
+                            <li>Promotional Videos</li>
+                            <li>Brand Storytelling</li>
+                            <li>Social Captions</li>
+                            <li>Content Calendars</li>
+                            <li>Product Launch Copy</li>
+                        </ul>
+                        <button class="service-inquiry" type="button" data-service="Content &amp; Reels Script Writing">Inquire for Service <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+
+                    <div class="work-card glass-card">
+                        <div class="work-icon">
+                            <i class="fa-solid fa-palette"></i>
+                        </div>
+                        <h3>Creative Design &amp; Branding</h3>
+                        <p>Distinctive visual systems that make a brand feel consistent and memorable.</p>
+                        <strong class="service-label">Services</strong>
+                        <ul class="service-list">
+                            <li>Social Media Creatives</li>
+                            <li>Event Posters</li>
+                            <li>Banner Design</li>
+                            <li>Brand Identity Assets</li>
+                            <li>Logo Concepts</li>
+                            <li>Brand Guidelines</li>
+                            <li>Presentation Design</li>
+                        </ul>
+                        <button class="service-inquiry" type="button" data-service="Creative Design &amp; Branding">Inquire for Service <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+
+                    <div class="work-card glass-card">
+                        <div class="work-icon">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+                        <h3>Product Strategy &amp; Consulting</h3>
+                        <p>Practical direction for turning early ideas into focused, useful digital products.</p>
+                        <strong class="service-label">Services</strong>
+                        <ul class="service-list">
+                            <li>MVP Planning</li>
+                            <li>Feature Prioritization</li>
+                            <li>User Journey Mapping</li>
+                            <li>Product Roadmaps</li>
+                            <li>Market Research</li>
+                            <li>User Flow Planning</li>
+                            <li>Consulting Sessions</li>
+                        </ul>
+                        <button class="service-inquiry" type="button" data-service="Product Strategy &amp; Consulting">Inquire for Service <i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="why-work glass-card">
+                    <div class="why-work-copy">
+                        <span class="why-work-label">WHY WORK WITH ME?</span>
+                        <h3>Why Work With Me?</h3>
+                        <p>I combine creative thinking with practical execution to deliver work that is useful, polished, and built around your goals.</p>
+                    </div>
+                    <ul class="why-work-list">
+                        <li><i class="fa-solid fa-circle-check"></i>End-to-end execution, from planning to delivery</li>
+                        <li><i class="fa-solid fa-circle-check"></i>Leadership experience managing teams and events</li>
+                        <li><i class="fa-solid fa-circle-check"></i>Strong design and development skills</li>
+                        <li><i class="fa-solid fa-circle-check"></i>Creative and result-focused approach</li>
+                        <li><i class="fa-solid fa-circle-check"></i>Fast communication and friendly delivery</li>
+                        <li><i class="fa-solid fa-circle-check"></i>Solution-focused for challenging projects</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+                        CONTACT SECTION
+        =========================================== -->
+        <section class="contact-section section-padding" id="contact">
+            <div class="container">
                 <div class="contact-box glass-card">
                     <div class="contact-content text-center">
-                        <div class="section-label centered">
-                            <span class="label-line"></span>
-                            <span>LET'S BUILD SOMETHING GREAT</span>
-                            <span class="label-line"></span>
-                        </div>
                         <h2 class="section-heading">
                             Interested in <span class="gradient-text">Working Together?</span>
                         </h2>
@@ -495,13 +511,70 @@
         </section>
     </main>
 
+    <div class="inquiry-modal" id="inquiry-modal" aria-hidden="true">
+        <div class="inquiry-modal-backdrop" data-modal-close></div>
+        <div class="inquiry-dialog" role="dialog" aria-modal="true" aria-labelledby="inquiry-title">
+            <button class="inquiry-close" type="button" aria-label="Close inquiry form" data-modal-close>
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="inquiry-heading">
+                <h2 id="inquiry-title">Let's Build Something Together</h2>
+                <p>Fill out the form below, and I'll get back to you within 24 hours.</p>
+            </div>
+            <form class="inquiry-form" id="inquiry-form">
+                <div class="inquiry-field-grid">
+                    <label>
+                        <span>Full Name <em>*</em></span>
+                        <input type="text" name="name" placeholder="John Doe" required>
+                    </label>
+                    <label>
+                        <span>Email Address <em>*</em></span>
+                        <input type="email" name="email" placeholder="john@example.com" required>
+                    </label>
+                    <label>
+                        <span>Phone Number <small>(Optional)</small></span>
+                        <input type="tel" name="phone" placeholder="+1 (555) 000-0000">
+                    </label>
+                    <label>
+                        <span>Company / Organization <small>(Optional)</small></span>
+                        <input type="text" name="organization" placeholder="Acme Corp">
+                    </label>
+                </div>
+                <label>
+                    <span>Purpose of Contact <em>*</em></span>
+                    <select name="service" id="inquiry-service" required>
+                        <option value="">Select a service</option>
+                        <option>Hire Me (Full-Time)</option>
+                        <option>Web Development</option>
+                        <option>UI/UX &amp; Figma Design</option>
+                        <option>Event Management</option>
+                        <option>Social Media Strategy</option>
+                        <option>Content &amp; Reels Script Writing</option>
+                        <option>Creative Design &amp; Branding</option>
+                        <option>Photography &amp; Videography</option>
+                        <option>Product Strategy &amp; Consulting</option>
+                    </select>
+                </label>
+                <label>
+                    <span>Message <em>*</em></span>
+                    <textarea name="message" rows="4" placeholder="Tell me about your project, timeline, or what you'd like to chat about..." required></textarea>
+                </label>
+                <button class="inquiry-submit btn btn-primary" type="submit">
+                    <i class="fa-regular fa-paper-plane"></i>
+                    <span>Send Message</span>
+                </button>
+                <p class="inquiry-success" id="inquiry-success" role="status">Thanks, your inquiry is ready to send.</p>
+            </form>
+        </div>
+    </div>
+
     <!-- ==========================================
                         FOOTER
     =========================================== -->
     <footer class="footer">
         <div class="container footer-content">
             <p>&copy; 2026 Vemireddy Bhavana. Crafted with precision, pure HTML, CSS & JavaScript.</p>
-            <a href="#home" class="back-to-top" aria-label="Back to Top">
+            <a href="#about" class="back-to-top" aria-label="Back to Top">
                 <i class="fa-solid fa-arrow-up"></i>
             </a>
         </div>

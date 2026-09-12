@@ -67,184 +67,45 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Initialize Hero Profession Typewriter
-    const heroTypingEl = document.getElementById('hero-typing');
-    const heroProfessions = [
+    // Initialize About Section "I am a" Typewriter (line 1)
+    const aboutTypingEl = document.getElementById('about-typing');
+    const aboutRoles = [
+        "Web Developer",
         "Frontend Developer",
         "Problem Solver",
-        "Web Developer",
         "Computer Science Student",
-        "UI Designer",
-        "Java Programmer"
+        "UI Designer"
     ];
-    new Typewriter(heroTypingEl, heroProfessions, {
-        typeSpeed: 85,
-        deleteSpeed: 45,
-        pauseDelay: 1700
-    });
+    if (aboutTypingEl) {
+        new Typewriter(aboutTypingEl, aboutRoles, {
+            typeSpeed: 80,
+            deleteSpeed: 42,
+            pauseDelay: 1800,
+            startDelay: 400
+        });
+    }
 
-    // Initialize Status Badge Typewriter
-    const statusTypingEl = document.getElementById('status-typing');
-    const statusTasks = [
-        "Building My Portfolio",
-        "Learning React",
+    // Initialize About Section "Currently Working On" Typewriter (line 2)
+    const aboutStatusTypingEl = document.getElementById('about-status-typing');
+    const aboutFocus = [
+        "Portfolio 2026",
+        "React Mastery",
         "DSA Practice",
-        "Open Source",
-        "AI Projects",
-        "Web Development"
+        "Clean Code",
+        "AI Exploration"
     ];
-    new Typewriter(statusTypingEl, statusTasks, {
-        typeSpeed: 70,
-        deleteSpeed: 35,
-        pauseDelay: 2000,
-        startDelay: 800
-    });
-
-
-    /* ==========================================================================
-       2. DYNAMIC MATHEMATICAL 3D TECH ORBIT (PURE JS SIN / COS)
-       ========================================================================== */
-    const orbitStage = document.getElementById('orbit-stage');
-    const orbitTrack = document.getElementById('orbit-track');
-    const techIcons = Array.from(document.querySelectorAll('.tech-icon'));
-    const visualRings = Array.from(document.querySelectorAll('.orbit-ring-visual'));
-
-    if (orbitStage && orbitTrack && techIcons.length > 0) {
-        const totalIcons = techIcons.length; // 11 icons
-        let baseAngle = 0;
-        let isHovered = false;
-        let rotationSpeed = 0.0035; // smooth orbital angular velocity in radians
-        let currentRotationSpeed = rotationSpeed;
-
-        // Mouse Physics Variables (Lerp)
-        let targetTiltX = 0;
-        let targetTiltY = 0;
-        let currentTiltX = 0;
-        let currentTiltY = 0;
-        let targetShiftX = 0;
-        let targetShiftY = 0;
-        let currentShiftX = 0;
-        let currentShiftY = 0;
-
-        // Calculate Orbit Radius dynamically based on container size
-        function getOrbitRadius() {
-            const width = orbitStage.clientWidth;
-            if (width <= 360) return 135;
-            if (width <= 480) return 155;
-            if (width <= 768) return 185;
-            if (width <= 1024) return 210;
-            return 235; // Default desktop radius
-        }
-
-        let radius = getOrbitRadius();
-
-        // Responsive resize recalculation
-        window.addEventListener('resize', () => {
-            radius = getOrbitRadius();
-        }, { passive: true });
-
-        // Track Mouse Movement over the window or orbit container
-        window.addEventListener('mousemove', (e) => {
-            const stageRect = orbitStage.getBoundingClientRect();
-            const stageCenterX = stageRect.left + stageRect.width / 2;
-            const stageCenterY = stageRect.top + stageRect.height / 2;
-
-            // Normalize mouse coordinates relative to orbit stage center (-1 to 1)
-            const deltaX = (e.clientX - stageCenterX) / (window.innerWidth / 2);
-            const deltaY = (e.clientY - stageCenterY) / (window.innerHeight / 2);
-
-            // Clamp tilt values for smooth elegance
-            const clampedX = Math.max(-1, Math.min(1, deltaX));
-            const clampedY = Math.max(-1, Math.min(1, deltaY));
-
-            // Orbit tilts towards the mouse cursor (3D perspective)
-            targetTiltX = clampedY * -16; // Pitch (deg)
-            targetTiltY = clampedX * 16;  // Yaw (deg)
-
-            // Subtle translation shift towards cursor
-            targetShiftX = clampedX * 18;
-            targetShiftY = clampedY * 18;
-        }, { passive: true });
-
-        // Reset tilt gently when mouse leaves window
-        document.addEventListener('mouseleave', () => {
-            targetTiltX = 0;
-            targetTiltY = 0;
-            targetShiftX = 0;
-            targetShiftY = 0;
+    if (aboutStatusTypingEl) {
+        new Typewriter(aboutStatusTypingEl, aboutFocus, {
+            typeSpeed: 65,
+            deleteSpeed: 32,
+            pauseDelay: 2200,
+            startDelay: 1000
         });
-
-        // Icon Hover Listeners: Slow down orbit and highlight icon
-        techIcons.forEach(icon => {
-            icon.addEventListener('mouseenter', () => {
-                isHovered = true;
-            });
-            icon.addEventListener('mouseleave', () => {
-                isHovered = false;
-            });
-        });
-
-        /**
-         * Core Animation Loop:
-         * 1. Interpolates tilt angles & shifts using Lerp (Linear Interpolation)
-         * 2. Calculates dynamic trigonometric positions (sin / cos) for each icon
-         * 3. Renders 3D perspective transforms strictly keeping icons on circular orbit
-         */
-        function animateOrbit() {
-            // Smooth speed dampening on hover
-            const targetSpeed = isHovered ? 0.0008 : rotationSpeed;
-            currentRotationSpeed += (targetSpeed - currentRotationSpeed) * 0.08;
-            baseAngle += currentRotationSpeed;
-
-            // Lerp easing for mouse tilt
-            currentTiltX += (targetTiltX - currentTiltX) * 0.06;
-            currentTiltY += (targetTiltY - currentTiltY) * 0.06;
-            currentShiftX += (targetShiftX - currentShiftX) * 0.06;
-            currentShiftY += (targetShiftY - currentShiftY) * 0.06;
-
-            // Apply 3D perspective tilt & shift to orbit track
-            orbitTrack.style.transform = `
-                translate3d(${currentShiftX}px, ${currentShiftY}px, 0)
-                rotateX(${currentTiltX}deg)
-                rotateY(${currentTiltY}deg)
-            `;
-
-            // Tilt background rings synchronously to maintain visual alignment
-            visualRings.forEach(ring => {
-                ring.style.transform = `
-                    translate3d(${currentShiftX * 0.4}px, ${currentShiftY * 0.4}px, 0)
-                    rotateX(${currentTiltX * 0.7}deg)
-                    rotateY(${currentTiltY * 0.7}deg)
-                `;
-            });
-
-            // Calculate exact (x, y) coordinates using Math.sin and Math.cos
-            const angleStep = (2 * Math.PI) / totalIcons;
-
-            techIcons.forEach((icon, i) => {
-                const angle = baseAngle + (i * angleStep);
-                // Math Trigonometry
-                const x = radius * Math.cos(angle);
-                const y = radius * Math.sin(angle);
-
-                // Counter-tilt icons slightly so they remain upright and visually clear in 3D
-                icon.style.transform = `
-                    translate3d(calc(-50% + ${x.toFixed(2)}px), calc(-50% + ${y.toFixed(2)}px), 0)
-                    rotateY(${-currentTiltY * 0.5}deg)
-                    rotateX(${-currentTiltX * 0.5}deg)
-                `;
-            });
-
-            requestAnimationFrame(animateOrbit);
-        }
-
-        // Start continuous animation loop
-        requestAnimationFrame(animateOrbit);
     }
 
 
     /* ==========================================================================
-       3. FIXED NAVBAR SCROLL & ACTIVE LINK OBSERVER
+       2. FIXED NAVBAR SCROLL & ACTIVE LINK OBSERVER
        ========================================================================== */
     const header = document.querySelector('.header');
     const navLinks = document.querySelectorAll('.nav-link');
@@ -259,13 +120,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
 
     // Active link highlighting via Intersection Observer
-    // Collect actual target elements referenced by nav links (robust to any tag type)
+    // Collect unique actual target elements referenced by nav links
     const observedTargets = [];
     navLinks.forEach(link => {
         const href = link.getAttribute('href');
         if (href && href.startsWith('#')) {
             const target = document.querySelector(href);
-            if (target) observedTargets.push(target);
+            if (target && !observedTargets.includes(target)) {
+                observedTargets.push(target);
+            }
         }
     });
 
@@ -287,6 +150,10 @@ document.addEventListener('DOMContentLoaded', () => {
                             link.classList.remove('active');
                         }
                     });
+                    // Automatically update browser address bar ("upside route") on scroll
+                    if (history.replaceState && window.location.hash !== `#${id}`) {
+                        history.replaceState(null, null, `#${id}`);
+                    }
                 }
             });
         }, observerOptions);
@@ -296,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     /* ==========================================================================
-       4. MOBILE MENU DRAWER TOGGLE
+       3. MOBILE MENU DRAWER TOGGLE
        ========================================================================== */
     const menuToggle = document.getElementById('menu-toggle');
     const navLinksContainer = document.getElementById('nav-links');
@@ -325,8 +192,71 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
+    /* =======================================================================
+       4. SERVICE INQUIRY MODAL
+       ======================================================================= */
+    const inquiryModal = document.getElementById('inquiry-modal');
+    const inquiryForm = document.getElementById('inquiry-form');
+    const inquiryService = document.getElementById('inquiry-service');
+    const inquirySuccess = document.getElementById('inquiry-success');
+    const inquiryButtons = document.querySelectorAll('.service-inquiry');
+    const talkButtons = document.querySelectorAll('.talk-btn');
+
+    if (inquiryModal && inquiryForm && inquiryService) {
+        let lastInquiryTrigger = null;
+
+        const closeInquiryModal = () => {
+            lastInquiryTrigger?.focus();
+            inquiryModal.classList.remove('is-open');
+            inquiryModal.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('modal-open');
+        };
+
+        const openInquiryModal = (service, trigger) => {
+            lastInquiryTrigger = trigger;
+            inquiryService.value = service;
+            inquirySuccess.classList.remove('is-visible');
+            inquiryModal.setAttribute('aria-hidden', 'false');
+            inquiryModal.classList.add('is-open');
+            document.body.classList.add('modal-open');
+            window.setTimeout(() => inquiryForm.elements.name.focus(), 150);
+        };
+
+        inquiryButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                openInquiryModal(button.dataset.service || '', button);
+            });
+        });
+
+        talkButtons.forEach(button => {
+            button.addEventListener('click', event => {
+                event.preventDefault();
+                event.stopImmediatePropagation();
+                openInquiryModal('Hire Me (Full-Time)', button);
+            });
+        });
+
+        inquiryModal.querySelectorAll('[data-modal-close]').forEach(control => {
+            control.addEventListener('click', closeInquiryModal);
+        });
+
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape' && inquiryModal.classList.contains('is-open')) {
+                closeInquiryModal();
+            }
+        });
+
+        inquiryForm.addEventListener('submit', event => {
+            event.preventDefault();
+            inquirySuccess.textContent = 'Thanks! Your inquiry has been received. I will get back to you soon.';
+            inquirySuccess.classList.add('is-visible');
+            inquiryForm.reset();
+        });
+    }
+
+
     /* ==========================================================================
-       5. SMOOTH SCROLLING ENHANCEMENT
+       5. SMOOTH SCROLLING & ADDRESS BAR ROUTE UPDATE
        ========================================================================== */
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -339,8 +269,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 targetElement.scrollIntoView({
                     behavior: 'smooth'
                 });
+                // Update the browser URL address bar ("upside route")
+                if (history.pushState) {
+                    history.pushState(null, null, href);
+                } else {
+                    window.location.hash = href;
+                }
             }
         });
     });
+
+    // Support initial hash navigation if user enters with a direct route (e.g. #experience)
+    if (window.location.hash) {
+        const initialTarget = document.querySelector(window.location.hash);
+        if (initialTarget) {
+            setTimeout(() => {
+                initialTarget.scrollIntoView({ behavior: 'smooth' });
+            }, 150);
+        }
+    }
 
 });
