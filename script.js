@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const inquiryService = document.getElementById('inquiry-service');
     const inquirySuccess = document.getElementById('inquiry-success');
     const inquiryButtons = document.querySelectorAll('.service-inquiry');
-    const talkButtons = document.querySelectorAll('.talk-btn');
+    const talkButtons = document.querySelectorAll('.talk-btn, .start-conversation-btn');
 
     if (inquiryModal && inquiryForm && inquiryService) {
         let lastInquiryTrigger = null;
@@ -255,8 +255,89 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
+    /* =======================================================================
+       5. PORTFOLIO CHATBOT
+       ======================================================================= */
+    const chatWidget = document.getElementById('chat-widget');
+    const chatLauncher = document.querySelector('.chat-launcher');
+    const chatPanel = document.getElementById('chat-panel');
+    const chatClose = document.querySelector('.chat-close');
+    const chatMessages = document.getElementById('chat-messages');
+    const chatForm = document.getElementById('chat-form');
+    const chatInput = document.getElementById('chat-input');
+
+    if (chatWidget && chatLauncher && chatPanel && chatMessages && chatForm && chatInput) {
+        const addChatMessage = (message, type) => {
+            const messageElement = document.createElement('div');
+            messageElement.className = `chat-message chat-message-${type}`;
+            messageElement.textContent = message;
+            chatMessages.appendChild(messageElement);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        };
+
+        const getChatReply = message => {
+            const normalizedMessage = message.toLowerCase();
+
+            if (normalizedMessage.includes('service') || normalizedMessage.includes('offer') || normalizedMessage.includes('help')) {
+                return 'Bhavana offers Web Development, UI/UX and Figma Design, Event Management, Content and Reels Script Writing, Creative Design and Branding, and Product Strategy and Consulting.';
+            }
+
+            if (normalizedMessage.includes('experience') || normalizedMessage.includes('skill')) {
+                return 'Bhavana focuses on frontend development, responsive UI, JavaScript, React, data structures, algorithms, and collaborative web projects.';
+            }
+
+            if (normalizedMessage.includes('education') || normalizedMessage.includes('study')) {
+                return 'Bhavana is studying Computer Science with a focus on Data Science and Artificial Intelligence, alongside a BSc in Computer Science.';
+            }
+
+            if (normalizedMessage.includes('contact') || normalizedMessage.includes('hire') || normalizedMessage.includes('email')) {
+                return 'Click Let\'s Talk or Start a Conversation to send an inquiry. You can also use the email icon in the footer to open Gmail.';
+            }
+
+            return 'I can help with services, experience, education, or contact details. Try one of the quick questions below.';
+        };
+
+        const submitChatMessage = message => {
+            const trimmedMessage = message.trim();
+            if (!trimmedMessage) return;
+
+            addChatMessage(trimmedMessage, 'user');
+            chatInput.value = '';
+            window.setTimeout(() => addChatMessage(getChatReply(trimmedMessage), 'bot'), 220);
+        };
+
+        const setChatOpen = isOpen => {
+            chatWidget.classList.toggle('is-open', isOpen);
+            chatPanel.setAttribute('aria-hidden', String(!isOpen));
+            chatLauncher.setAttribute('aria-expanded', String(isOpen));
+            if (isOpen) window.setTimeout(() => chatInput.focus(), 150);
+        };
+
+        chatLauncher.addEventListener('click', () => {
+            setChatOpen(!chatWidget.classList.contains('is-open'));
+        });
+
+        chatClose.addEventListener('click', () => setChatOpen(false));
+
+        chatForm.addEventListener('submit', event => {
+            event.preventDefault();
+            submitChatMessage(chatInput.value);
+        });
+
+        chatPanel.querySelectorAll('[data-chat-prompt]').forEach(prompt => {
+            prompt.addEventListener('click', () => submitChatMessage(prompt.dataset.chatPrompt));
+        });
+
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape' && chatWidget.classList.contains('is-open')) {
+                setChatOpen(false);
+            }
+        });
+    }
+
+
     /* ==========================================================================
-       5. SMOOTH SCROLLING & ADDRESS BAR ROUTE UPDATE
+       6. SMOOTH SCROLLING & ADDRESS BAR ROUTE UPDATE
        ========================================================================== */
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
